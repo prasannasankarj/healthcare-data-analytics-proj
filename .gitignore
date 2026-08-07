@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+.venv/
+venv/
+.env
+
+# VS Code
+.vscode/
+
+# MySQL
+*.db
+
+# Data
+data/processed/
+
+# Logs
+logs/
+
+# Power BI temporary files
+*.pbix.autosave
+
+# OS Files
+.DS_Store
+Thumbs.db
