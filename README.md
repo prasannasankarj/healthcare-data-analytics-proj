@@ -124,6 +124,12 @@ python python/main.py
 
 This will create CSV files under the data/raw folder.
 
+### Clean the RAW data
+
+```
+python python/cleaning/clean_all.py
+```
+
 ### Copy the createtables sql file inside docker
 ```
 docker cp "C:\Users\prasa\OneDrive\Desktop\Data_Analyst_Proj\healthcare-data-analytics-proj\sql\tables\01_create_tables.sql" healthcare_mysql:/01_create_tables.sql
