@@ -1,27 +1,16 @@
 USE healthcare_analytics;
 
-SELECT COUNT(*) AS Departments FROM Departments;
-
-SELECT COUNT(*) AS Doctors FROM Doctors;
-
-SELECT COUNT(*) AS Patients FROM Patients;
-
-SELECT COUNT(*) AS Admissions FROM Admissions;
-
-SELECT COUNT(*) AS Billing FROM Billing;
-
-SELECT COUNT(*) AS LabResults FROM LabResults;
+SELECT COUNT(*) AS departments FROM departments;
+SELECT COUNT(*) AS doctors FROM doctors;
+SELECT COUNT(*) AS patients FROM patients;
+SELECT COUNT(*) AS admissions FROM admissions;
+SELECT COUNT(*) AS billing FROM billing;
+SELECT COUNT(*) AS labresults FROM labresults;
 
 -- Sample Records
-
-SELECT * FROM Departments LIMIT 10;
-
-SELECT * FROM Doctors LIMIT 10;
-
-SELECT * FROM Patients LIMIT 10;
-
-SELECT * FROM Admissions LIMIT 10;
-
-SELECT * FROM Billing LIMIT 10;
-
-SELECT * FROM LabResults LIMIT 10;
+SELECT * FROM departments LIMIT 10;
+SELECT * FROM doctors LIMIT 10;
+SELECT * FROM patients LIMIT 10;
+SELECT * FROM admissions LIMIT 10;
+SELECT * FROM billing LIMIT 10;
+SELECT * FROM labresults LIMIT 10;

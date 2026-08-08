@@ -1,5 +1,4 @@
 import random
-
 import pandas as pd
 from faker import Faker
 
@@ -9,27 +8,16 @@ from utils.logger import logger
 
 fake = Faker()
 
-
 def generate():
-
-    rows=[]
+    rows = []
 
     for lab in range(1, NUM_LAB_RESULTS + 1):
-
         rows.append({
-
-            "LabID": lab,
-
-            "AdmissionID": random.randint(1,15000),
-
+            "AdmissionID": random.randint(1, 15000),
             "TestName": random.choice(LAB_TESTS),
-
-            "Result": random.choice(
-                ["Normal","Abnormal","Borderline"]
-            ),
-
-            "ResultDate": fake.date_between("-2y","today")
-
+            "ResultStatus": random.choice(["Normal", "Abnormal", "Borderline"]),  # matches schema
+            "TestValue": str(random.randint(50, 200)),  # optional numeric/string value
+            "TestDate": fake.date_between(start_date="-2y", end_date="today")
         })
 
     pd.DataFrame(rows).to_csv(
@@ -38,3 +26,6 @@ def generate():
     )
 
     logger.info("Lab results generated")
+
+if __name__ == "__main__":
+    generate()
