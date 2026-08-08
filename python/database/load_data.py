@@ -3,7 +3,7 @@ import pandas as pd
 from db_connection import engine
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA = ROOT / "data" / "raw"
+DATA = ROOT / "data" / "cleaned"
 
 files = {
     "departments.csv": "departments",
